@@ -1,0 +1,16 @@
+<div>
+	<h2>View 1</h2>
+
+	<p>Search by name: <input type="text" data-ng-model="filter.name"></p>
+
+	<ul>
+		<li data-ng-repeat="cust in customers | filter:filter.name">{{cust.name}} - {{cust.city}}</li>
+	</ul>
+
+	<p>Customer name: <input type="text" data-ng-model="newCustomer.name"></p>
+	<p>Customer city: <input type="text" data-ng-model="newCustomer.city"></p>
+	<button data-ng-click="addCustomer()">Add customer</button>
+	<p>
+		<a data-ng-href="#/view2">View 2</a>
+	</p>
+</div>
